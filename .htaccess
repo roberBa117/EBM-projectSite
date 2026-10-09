@@ -1,0 +1,10 @@
+Options -Indexes
+AddDefaultCharset UTF-8
+<IfModule mod_headers.c>
+<FilesMatch "\.(html)$">
+Header set Cache-Control "no-cache, must-revalidate"
+</FilesMatch>
+<FilesMatch "\.(css|js)$">
+Header set Cache-Control "public, max-age=3600"
+</FilesMatch>
+</IfModule>
